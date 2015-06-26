@@ -1,3 +1,26 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<h2 id="title">UI-Tabs</h2>
 
-{{outlet}}
+{{#ui-tabs}}
+  {{#ui-tab-list}}
+    {{#ui-tab}}New York{{/ui-tab}}
+    {{#ui-tab}}Los Angeles{{/ui-tab}}
+    {{#ui-tab}}Chicago{{/ui-tab}}
+    {{#ui-tab}}San Francisco{{/ui-tab}}
+  {{/ui-tab-list}}
+
+  {{#ui-tab-content}}
+    <h5>Financial</h5>
+  {{/ui-tab-content}}
+
+  {{#ui-tab-content}}
+    <h5>Hollywood</h5>
+  {{/ui-tab-content}}
+
+  {{#ui-tab-content}}
+    <h5>Chiraq</h5>
+  {{/ui-tab-content}}
+
+  {{#ui-tab-content}}
+    <h5>Tech</h5>
+  {{/ui-tab-content}}
+{{/ui-tabs}}
