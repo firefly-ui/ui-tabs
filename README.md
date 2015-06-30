@@ -1,25 +1,18 @@
 # Ui-tabs
 
-This README outlines the details of collaborating on this Ember addon.
+Basic tabbed interface.
 
-## Installation
+## How to use
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+* Include the latest version in your `package.json`.
+* Components render buttons that will control their associated content.
+* Pass in a `target`, which is the id of the associated content element.
+* `on-click="setCurrentTab"` is required as the action will bubble up in your application.
+* `currentTab=currentTab` is required as your app will pass in the current tab information back to the component.
+* Include the action, `setCurrentTab`, in your actions hash (controller) to set the current tab.
+  * `setCurrentTab(tab) { this.set('currentTab', tab); }`
 
-## Running
+## Options
 
-* `ember server`
-* Visit your app at http://localhost:4200.
-
-## Running Tests
-
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+* You can specify the default content by passing in `default=true`.
+* i.e. `{{#ui-tab on-click="setCurrentTab" currentTab=currentTab target="#id" default=true}}Button1{{/ui-tab}}`
