@@ -1,26 +1,15 @@
-<h2 id="title">UI-Tabs</h2>
+<h2 id="title">FireFly Tabs</h2>
 
-{{#ui-tabs}}
-  {{#ui-tab-list}}
-    {{#ui-tab}}New York{{/ui-tab}}
-    {{#ui-tab}}Los Angeles{{/ui-tab}}
-    {{#ui-tab}}Chicago{{/ui-tab}}
-    {{#ui-tab}}San Francisco{{/ui-tab}}
-  {{/ui-tab-list}}
+<div class="container">
+  {{#ui-tab on-click="setCurrentTab" currentTab=currentTab target="#new-york" default=true}}New York{{/ui-tab}}
+  {{#ui-tab on-click="setCurrentTab" currentTab=currentTab target="#los-angeles"}}Los Angeles{{/ui-tab}}
+  {{#ui-tab on-click="setCurrentTab" currentTab=currentTab target="#chicago"}}Chicago{{/ui-tab}}
+  {{#ui-tab on-click="setCurrentTab" currentTab=currentTab target="#san-francisco"}}San Francisco{{/ui-tab}}
+</div>
 
-  {{#ui-tab-content}}
-    <h5>Financial</h5>
-  {{/ui-tab-content}}
+<hr>
 
-  {{#ui-tab-content}}
-    <h5>Hollywood</h5>
-  {{/ui-tab-content}}
-
-  {{#ui-tab-content}}
-    <h5>Chiraq</h5>
-  {{/ui-tab-content}}
-
-  {{#ui-tab-content}}
-    <h5>Tech</h5>
-  {{/ui-tab-content}}
-{{/ui-tabs}}
+<p id="new-york">Financial</p>
+<p id="los-angeles">Hollywood</p>
+<p id="chicago">Chiraq</p>
+<p id="san-francisco">Tech</p>
