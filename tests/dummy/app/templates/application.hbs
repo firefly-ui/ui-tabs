@@ -1,3 +1,15 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<h2 id="title">FireFly Tabs</h2>
 
-{{outlet}}
+<div class="container">
+  {{#ui-tab on-click="setCurrentTab" currentTab=currentTab target="#new-york" default=true}}New York{{/ui-tab}}
+  {{#ui-tab on-click="setCurrentTab" currentTab=currentTab target="#los-angeles"}}Los Angeles{{/ui-tab}}
+  {{#ui-tab on-click="setCurrentTab" currentTab=currentTab target="#chicago"}}Chicago{{/ui-tab}}
+  {{#ui-tab on-click="setCurrentTab" currentTab=currentTab target="#san-francisco"}}San Francisco{{/ui-tab}}
+</div>
+
+<hr>
+
+<p id="new-york">Financial</p>
+<p id="los-angeles">Hollywood</p>
+<p id="chicago">Chiraq</p>
+<p id="san-francisco">Tech</p>

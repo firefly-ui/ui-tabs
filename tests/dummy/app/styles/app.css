@@ -1,0 +1,39 @@
+body {
+  background: #CED1DB;
+}
+
+h2 {
+  text-align: center;
+  font-size: 50px;
+  color: #FF6862;
+}
+
+button {
+  display: inline-block;
+  width: 120px;
+  height: 60px;
+  background: #FF6862;
+  margin: 0;
+  outline: none;
+  border-radius: 20px 20px 0 0;
+  border: 5px solid white;
+  border-bottom: none;
+  font-weight: bold;
+  font-size: 14px;
+  color: #332884;
+}
+
+.container {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-size: 40px;
+  color: #332884;
+}
+
+hr {
+  margin-top: 0;
+  border: 5px solid white;
+}
