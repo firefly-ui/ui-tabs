@@ -3,13 +3,15 @@
 Basic tabbed interface.
 
 ## Usage
+
 This Ember addon provides a `ui-tab` component.
 
 Pass in a target which is the ID of the associated element. Current tab is required as your app will pass in the current tab information back to the component.
 
 **Example:**
 Template:
-```
+
+```hbs
 <div class="container">
   {{#ui-tab on-click="setCurrentTab" currentTab=currentTab target="#tab-one" default=true}}Tab One{{/ui-tab}}
   {{#ui-tab on-click="setCurrentTab" currentTab=currentTab target="#tab-two"}}Tab Two{{/ui-tab}}
@@ -23,10 +25,10 @@ Template:
 <p id="tab-four">Tab Four</p>
 ```
 
-
 Include the action 'setCurrentTab' in your controller to set the current tab.
+
 Controller:
-```
+```javascript
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
@@ -39,4 +41,5 @@ export default Ember.Controller.extend({
 ```
 
 ## Styles
+
 The component `ui-tab` component is easily customizable for your application.  
