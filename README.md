@@ -2,17 +2,44 @@
 
 Basic tabbed interface.
 
-## How to use
+## Usage
 
-* Include the latest version in your `package.json`.
-* Components render buttons that will control their associated content.
-* Pass in a `target`, which is the id of the associated content element.
-* `on-click="setCurrentTab"` is required as the action will bubble up in your application.
-* `currentTab=currentTab` is required as your app will pass in the current tab information back to the component.
-* Include the action, `setCurrentTab`, in your actions hash (controller) to set the current tab.
-  * `setCurrentTab(tab) { this.set('currentTab', tab); }`
+This Ember addon provides a `ui-tab` component.
 
-## Options
+Pass in a target which is the ID of the associated element. Current tab is required as your app will pass in the current tab information back to the component.
 
-* You can specify the default content by passing in `default=true`.
-* i.e. `{{#ui-tab on-click="setCurrentTab" currentTab=currentTab target="#id" default=true}}Button1{{/ui-tab}}`
+**Example:**
+Template:
+
+```hbs
+<div class="container">
+  {{#ui-tab on-click="setCurrentTab" currentTab=currentTab target="#tab-one" default=true}}Tab One{{/ui-tab}}
+  {{#ui-tab on-click="setCurrentTab" currentTab=currentTab target="#tab-two"}}Tab Two{{/ui-tab}}
+  {{#ui-tab on-click="setCurrentTab" currentTab=currentTab target="#tab-three"}}Tab Three{{/ui-tab}}
+  {{#ui-tab on-click="setCurrentTab" currentTab=currentTab target="#tab-four"}}Tab Four{{/ui-tab}}
+</div>
+
+<p id="tab-one">Tab One</p>
+<p id="tab-two">Tab Two</p>
+<p id="tab-three">Tab Three</p>
+<p id="tab-four">Tab Four</p>
+```
+
+Include the action 'setCurrentTab' in your controller to set the current tab.
+
+Controller:
+```javascript
+import Ember from 'ember';
+
+export default Ember.Controller.extend({
+  actions: {
+    setCurrentTab(tab) {
+      this.set('currentTab', tab);
+    }
+  }
+});
+```
+
+## Styles
+
+The component `ui-tab` component is easily customizable for your application.  
